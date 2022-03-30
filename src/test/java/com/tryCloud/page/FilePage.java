@@ -42,10 +42,6 @@ public class FilePage extends BasePage{
     @FindBy(xpath = "//a[@class='button new']")
     public WebElement addNewFileButton;
 
-    @FindBy(xpath = "//span[.='Upload file']")
-    public WebElement uploadFileButton;
-
-
 
     @FindBy(xpath = "//input[@id='file_upload_start']")
     public WebElement uploadFileBtn;
