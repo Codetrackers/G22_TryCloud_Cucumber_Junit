@@ -67,5 +67,7 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//li[contains(@class,'router-link-exact-active active')]//span[contains(@class,'line-one__title')]")
     public WebElement searchResultForUser;
 
+    @FindBy(xpath = "//ul[@id='appmenu']//li[@data-id]/a")
+    public List<WebElement> mainModulesList;
 
 }
