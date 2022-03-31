@@ -1,5 +1,8 @@
 package com.tryCloud.page;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
 public class GeneralPage extends BasePage{
     // Please write you code just under your name.
     //Elkhan 6-16
@@ -35,13 +38,9 @@ public class GeneralPage extends BasePage{
 
 
 
-
-
-
     //seper42-45
-
-
-
+    @FindBy(xpath = "//*[@id='headerSelection']")
+    public WebElement selectAllFilesCheckBox;
 
     //Olga 46-56
 
