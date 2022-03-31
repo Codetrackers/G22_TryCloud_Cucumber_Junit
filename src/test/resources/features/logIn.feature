@@ -12,8 +12,3 @@ Feature:
       | User31   | Userpass123 |
       | User61   | Userpass123 |
       | User91   | Userpass123 |
-
-
-
-
-
