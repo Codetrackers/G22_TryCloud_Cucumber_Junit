@@ -28,6 +28,7 @@ public class US_1 {
         logInPage.passWordBox.sendKeys(password);
     }
 
+
     @When("user click the login button")
     public void user_click_the_login_button() {
         logInPage.loginBtn.click();
