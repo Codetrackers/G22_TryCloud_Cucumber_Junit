@@ -8,6 +8,11 @@ import java.util.List;
 public class FilePage extends BasePage{
 
 
+    @FindBy(xpath = "//ul[@class='with-icon']/li/a")
+    public List<WebElement> subModules;
+
+    @FindBy(xpath = "//div[contains(@class,'fileActionsMenu')]//a/span[2]")
+    public List<WebElement> actionIconOptions;
 
     @FindBy(xpath = "//table[@id='filestable']//th[1]/label[@for='select_all_files']")
     public WebElement selectAllCheckBox;
