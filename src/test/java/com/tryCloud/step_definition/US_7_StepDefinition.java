@@ -10,8 +10,11 @@ public class US_7_StepDefinition {
 
     LogInPage logInPage = new LogInPage();
 
+
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
+        logInPage.goTo();
+        logInPage.login();
 
     }
     @When("the user clicks the {string} module")
