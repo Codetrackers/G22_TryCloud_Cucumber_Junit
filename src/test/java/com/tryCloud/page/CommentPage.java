@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CommentPage extends BasePage{
 
-    @FindBy (xpath = "//a/span[.='Actions']")
+    @FindBy (xpath = "//a//span[@class='icon icon-more']")
     public List<WebElement> actionIcons;
 
     @FindBy (xpath = "//a/span[.='Details']")
@@ -22,7 +22,7 @@ public class CommentPage extends BasePage{
     @FindBy (xpath = "//div//input[@type='submit']")
     public WebElement submitBtn;
 
-    @FindBy (xpath = "//ul/li/div[@class='authorRow']")
+    @FindBy (xpath = "//ul/li/div[@class='message']")
     public WebElement hiddenTextMsg;
 
 }
