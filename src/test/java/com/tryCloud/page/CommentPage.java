@@ -16,8 +16,8 @@ public class CommentPage extends BasePage{
     @FindBy (xpath = "//a[@id='commentsTabView']")
     public WebElement commentBtn;
 
-    @FindBy (xpath = "//section//div[@class='message']")
-    public List<WebElement> commentBox;
+    @FindBy (xpath = "//form[@class='newCommentForm']")
+    public WebElement commentBox;
 
     @FindBy (xpath = "//input[@class='submit icon-confirm has-tooltip']") // or //div//input[@type='submit']
     public WebElement submitBtn;
