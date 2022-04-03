@@ -17,7 +17,7 @@ public class CommentPage extends BasePage{
     public WebElement commentBtn;
 
     @FindBy (xpath = "//section//div[@class='message']")
-    public WebElement commentBox;
+    public List<WebElement> commentBox;
 
     @FindBy (xpath = "//div//input[@type='submit']")
     public WebElement submitBtn;
