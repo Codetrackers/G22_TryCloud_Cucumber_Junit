@@ -27,8 +27,21 @@ public class US09_StepDef {
             }
         }
 
+        @When ("user choose the Comments option")
+        public void user_choose_the_Comments_option(String commentsTabView){
+
+            commentsTabView = "app-sidebar-tabs__tab-icon icon-comment";
+
+            for (WebElement eachOption : commonDefinitions.filePage.actionIconOptions) {
+                if (eachOption.getClass().equals(commentsTabView)) {
+                    eachOption.click();
+                    break;
+                }
+            }
+        }
+
         @When("user write a comment inside the input box")
-        public void user_write_a_comment_inside_the_input_box () {
+        public void user_write_a_comment_inside_the_input_box() {
             String commentAdded = "Hello B25";
             for (WebElement eachElement : commentPage.commentBox) {
                 if (eachElement.getClass().equals("message")) {
@@ -42,6 +55,7 @@ public class US09_StepDef {
         public void user_click_the_submit_button_to_post_it () {
             commentPage.submitBtn.click();
         }
+
         @Then("Verify the comment is displayed in the comment section.")
         public void verify_the_comment_is_displayed_in_the_comment_section () {
             Assert.assertTrue(commentPage.hiddenTextMsg.isDisplayed());
