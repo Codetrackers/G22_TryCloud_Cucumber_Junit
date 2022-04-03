@@ -1,20 +1,27 @@
 package com.tryCloud.step_definition;
 
+import com.tryCloud.page.CommentPage;
 import com.tryCloud.page.DashboardPage;
 import com.tryCloud.page.FilePage;
 import com.tryCloud.page.LogInPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 
 public class US09_StepDef {
 
-    DashboardPage dashboardPage = new DashboardPage();
-    FilePage filePage = new FilePage();
+    CommonDefinitions commonDefinitions = new CommonDefinitions();
+    CommentPage commentPage = new CommentPage();
 
     @When("user click action-icon  from any file on the page")
-    public void user_click_action_icon_from_any_file_on_the_page() {
-
-    }
+    public void user_click_action_icon_from_any_file_on_the_page(String actionIcon) {
+            for (WebElement eachElement : commentPage.actionIcon) {
+                if(eachElement.getClass().equals("icon icon-more")){
+                    eachElement.click();
+                    break;
+                }
+            }
+        }
     @When("user write a comment inside the input box")
     public void user_write_a_comment_inside_the_input_box() {
 
