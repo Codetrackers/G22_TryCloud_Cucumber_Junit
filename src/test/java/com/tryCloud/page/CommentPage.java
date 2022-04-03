@@ -19,7 +19,7 @@ public class CommentPage extends BasePage{
     @FindBy (xpath = "//section//div[@class='message']")
     public List<WebElement> commentBox;
 
-    @FindBy (xpath = "//div//input[@type='submit']")
+    @FindBy (xpath = "//input[@class='submit icon-confirm has-tooltip']") // or //div//input[@type='submit']
     public WebElement submitBtn;
 
     @FindBy (xpath = "//ul/li/div[@class='message']")
