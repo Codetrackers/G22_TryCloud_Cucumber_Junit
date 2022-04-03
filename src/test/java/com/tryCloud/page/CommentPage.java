@@ -22,4 +22,7 @@ public class CommentPage extends BasePage{
     @FindBy (xpath = "//div//input[@type='submit']")
     public WebElement submitBtn;
 
+    @FindBy (xpath = "//ul/li/div[@class='authorRow']")
+    public WebElement hiddenTextMsg;
+
 }
