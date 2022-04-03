@@ -42,6 +42,7 @@ public class US09_StepDef {
 
         @When("user write a comment inside the input box")
         public void user_write_a_comment_inside_the_input_box() {
+            /*
             String commentAdded = "Hello B25";
             for (WebElement eachElement : commentPage.commentBox) {
                 if (eachElement.getClass().equals("message")) {
@@ -49,6 +50,10 @@ public class US09_StepDef {
                     break;
                 }
             }
+
+             */
+            String commentAdded = "Hello B25";
+            commentPage.commentBox.sendKeys(commentAdded);
         }
 
         @When("user click the submit button to post it")
