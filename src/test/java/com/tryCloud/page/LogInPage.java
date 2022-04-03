@@ -39,8 +39,6 @@ public class LogInPage extends BasePage {
         usernameBox.sendKeys("user52");
         passWordBox.sendKeys("Userpass123");
         loginBtn.click();
-
-
     }
 
 
