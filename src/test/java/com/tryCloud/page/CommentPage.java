@@ -8,7 +8,7 @@ import java.util.List;
 public class CommentPage extends BasePage{
 
     @FindBy (xpath = "//a/span[.='Actions']")
-    public List<WebElement> actionIcon;
+    public List<WebElement> actionIcons;
 
     @FindBy (xpath = "//a/span[.='Details']")
     public WebElement detailsIcon;
