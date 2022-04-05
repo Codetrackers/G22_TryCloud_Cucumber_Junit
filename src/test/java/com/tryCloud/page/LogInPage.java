@@ -4,7 +4,6 @@ import com.tryCloud.utility.ConfigurationReader;
 import com.tryCloud.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LogInPage extends BasePage {
 
@@ -40,7 +39,5 @@ public class LogInPage extends BasePage {
         passWordBox.sendKeys("Userpass123");
         loginBtn.click();
     }
-
-
 
 }
