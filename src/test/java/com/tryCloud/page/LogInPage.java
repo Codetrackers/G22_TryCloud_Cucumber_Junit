@@ -9,11 +9,11 @@ public class LogInPage extends BasePage {
 
 
     @FindBy(id = "user")
-    public WebElement usernameBox;
+    public static WebElement usernameBox;
 
 
     @FindBy(id = "password")
-    public WebElement passWordBox;
+    public static WebElement passWordBox;
 
 
     @FindBy(id = "submit-form")
@@ -21,8 +21,10 @@ public class LogInPage extends BasePage {
 
 
     @FindBy(xpath = "//*[@*='warning wrongPasswordMsg']")
-    public WebElement warningMsg;
+    public static WebElement warningMsg;
 
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
+    public static WebElement warningMessage;//updated xpath-Hamid
 
     @FindBy(id = "lost-password")
     public WebElement forgotPasswordLink;
