@@ -23,23 +23,7 @@ public class US_4 {
     FilePage filesPage = new FilePage();
     GeneralPage generalPage= new GeneralPage();
 
-    @Given("user is on the dashboard page")
-    public void user_is_on_the_dashboard_page() {
-        logInPage.goTo();
-        logInPage.login();
 
-
-    }
-
-    @When("user clicks the {string} module")
-    public void userClicksTheModule(String module) {
-        for (WebElement eachModule : dashboardPage.mainModulesList) {
-            if (eachModule.getAttribute("aria-label").equals(module)) {
-                eachModule.click();
-                break;
-            }
-        }
-    }
 
     @Then("verify the page title is {string}")
     public void verify_the_page_title_is(String expectedTitle) {
