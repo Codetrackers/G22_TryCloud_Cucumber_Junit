@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/tryCloud/step_definition",
         plugin = {"pretty", "html:target/cucumber.html"
-        } ,
+        },
         dryRun = false,
         publish = true,
         tags = ""

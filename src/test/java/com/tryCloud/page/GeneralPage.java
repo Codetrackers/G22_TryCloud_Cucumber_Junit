@@ -3,6 +3,10 @@ package com.tryCloud.page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+import java.util.List;
+
+
 public class GeneralPage extends BasePage{
     // Please write you code just under your name.
     //Elkhan 6-16
@@ -43,15 +47,11 @@ public class GeneralPage extends BasePage{
     public WebElement selectAllFilesCheckBox;
 
     //Olga 46-56
+    @FindBy(xpath= "//td[@class='filename']//span[@class='innernametext']")
+    public List<WebElement> favoritesList;
 
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public List<WebElement> fileName;
 
     //Karen 58-68
 
