@@ -24,12 +24,12 @@ public class US_4 {
     GeneralPage generalPage= new GeneralPage();
 
 
-
+/*
     @Then("verify the page title is {string}")
     public void verify_the_page_title_is(String expectedTitle) {
         assertEquals(expectedTitle, Driver.getDriver().getTitle());
     }
-
+*/
     //Second Scenario
 
 
@@ -41,7 +41,7 @@ public class US_4 {
     @Then("verify all the files are selected")
     public void verifyAllTheFilesAreSelected() {
         for (WebElement eachFile : filesPage.uploadedFilesSelectors) {
-            assertTrue(eachFile.isSelected());
-        }
+           assertTrue(eachFile.isSelected());
+       }
     }
 }
