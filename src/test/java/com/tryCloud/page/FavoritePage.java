@@ -14,6 +14,7 @@ public class FavoritePage extends BasePage{
     @FindBy(xpath = "//a[contains(@class,'action-menu')]//span[@class='icon icon-more']")
     public List<WebElement> actionBtns;
 
+
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeFromFav;
 }
