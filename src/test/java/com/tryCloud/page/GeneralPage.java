@@ -67,10 +67,21 @@ public class GeneralPage extends BasePage{
 
     //Tuya70-80
 
-
-
-
-
+    @FindBy(xpath = "//*[@id='appmenu']//li[@data-id='files']")
+    public WebElement fileModule;
+    @FindBy(xpath = "//span[@class='icon icon-add']")
+    public WebElement addIcon;
+    @FindBy(xpath = "//*[@id=\"controls\"]//a/span[contains(.,'New folder')]")
+    public WebElement newFolder;
+    @FindBy(xpath = "//input[contains(@value,'New folder')]")
+    public WebElement inputFolderName;
+    @FindBy(xpath = "//input[@class='icon-confirm']")
+    public WebElement submitIcon;
+    @FindBy(xpath = "//div[@id='app-content-files'] //*[@class='innernametext']")
+    //div[@id='app-content-files']
+    public List<WebElement> fileNames;
+    @FindBy(xpath = "//span[.='Upload file']")
+    public WebElement uploadFiles;
 
 
 

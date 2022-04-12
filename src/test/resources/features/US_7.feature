@@ -1,23 +1,33 @@
 
 Feature: As a user, I should be able to remove files from the favorites and upload a file directly
 
-  Background:
-    Given user on the dashboard page
-    When the user clicks the "Files" module
+  Scenario Outline: Verify users can add the folder
 
-
-  Scenario: Verify users can add the folder
-
+   Given user on the dashboard page with "<username>" and "<password>"
+   When user clicks the "Files" module
     And user clicks the add icon on the top
-    And user click "new folder”
-    And user write a folder name
-    When the user click submit icon
-    Then Verify the folder is displayed on the page
+    And user click new folder
+    And user write a "<folderName>"
+    When user click submit icon
+    Then Verify the "<folderName>" is displayed on the page
+
+    Examples:
+      | username | password    | folderName |
+      | User31   | Userpass123 |  user11    |
+      | User61   | Userpass123 |   user22   |
+      | User91   | Userpass123 |   user33   |
 
 
-  Scenario:  Verify users can upload a file inside a folder
+  Scenario Outline:  Verify users can upload a file inside a folder
 
-    And user choose a folder from the page
+    Given user on the dashboard page with "<username>" and "<password>"
+    When user clicks the "Files" module
     And user clicks the add icon on the top
-    When the user uploads a file with the upload file option
-    Then Verify the file is displayed on the page
+    When user uploads "<fileName>" with the upload file option
+    Then Verifies the "<fileName>" is displayed on the page
+
+    Examples:
+      | username | password    | fileName |
+      | User31   | Userpass123 |  C:\Users\shtuy\OneDrive\Pictures\Screenshots\Discord.png   |
+    #  | User61   | Userpass123 |   C:\Users\shtuy\OneDrive\Pictures\Screenshots\IDandClassAttributes.png   |
+     # | User91   | Userpass123 |   C:\Users\shtuy\OneDrive\Pictures\Screenshots\Cucumber_2_Layers.png   |
