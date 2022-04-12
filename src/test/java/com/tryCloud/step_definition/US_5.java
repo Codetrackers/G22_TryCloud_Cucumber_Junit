@@ -19,7 +19,7 @@ public class US_5 {
     Faker faker = new Faker();
     int num = faker.number().numberBetween(1,filePage.uploadedFilesSelectors.size());
     GeneralPage generalPage = new GeneralPage();
-    String fileName="";
+    static String fileName="";
     //
 //    @Given("user on the dashboard page")
 //    public void user_on_the_dashboard_page() {

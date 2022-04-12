@@ -36,7 +36,7 @@ public class CommonDefinitions {
     @And("user click the {string} sub-module on the left side")
     public void userClickTheSubModuleOnTheLeftSide(String subModule) {
         for (WebElement eachSubModule : filePage.subModules) {
-            if(eachSubModule.getText().equals(subModule)){
+            if(eachSubModule.getText().contains(subModule)){
                 eachSubModule.click();
                 break;
             }
@@ -47,7 +47,7 @@ public class CommonDefinitions {
     @And("user choose the {string} option")
     public void userChooseTheOption(String actionIconOption) {
         for (WebElement eachOption : filePage.actionIconOptions) {
-            if(eachOption.getText().equals(actionIconOption)){
+            if(eachOption.getText().contains(actionIconOption)){
                 eachOption.click();
                 break;
             }

@@ -51,4 +51,6 @@ public class FilePage extends BasePage{
     @FindBy(xpath = "//input[@id='file_upload_start']")
     public WebElement uploadFileBtn;
 
+@FindBy(xpath = "//a[@class='nav-icon-trashbin svg']")
+    public WebElement deletedFilesFolder;
 }

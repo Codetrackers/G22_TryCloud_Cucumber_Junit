@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
         glue = "com/tryCloud/step_definition",
         plugin = {"pretty", "html:target/cucumber.html"
         } ,
-        dryRun = false,
+        dryRun = true,
         publish = true,
-        tags = ""
+        tags = "wip"
 )
 public class CukesRunner {
 }
