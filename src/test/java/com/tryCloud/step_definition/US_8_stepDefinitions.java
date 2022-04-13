@@ -55,10 +55,27 @@ login page
         BrowserUtils.waitFor(4);
         System.out.println(fileNameToDelete);
         favoritePage.actionBtns.get(num).click();
-       // deletePage.deleteIcon.click();
+       deletePage.deleteIcon.click();
         BrowserUtils.sleep(8);
 
     }
+    @Then("verify the deleted file is displayed on the page")
+    public void verifyTheDeletedFileIsDisplayedOnThePage(){
+
+        //   List<String> actualDeletedItem = BrowserUtils.getElementsText(deletePage.deletedItems);
+        BrowserUtils.sleep(5);
+
+        List<String> actualDeletedItem = new ArrayList<>();
+        for (WebElement each : deletePage.deletedItems) {
+            actualDeletedItem.add(each.getText());
+
+        }
+        System.out.println("actualDeletedItem = " + actualDeletedItem);
+        Assert.assertTrue(actualDeletedItem.contains(fileNameToDelete));
+
+    }
+
+
 
   /* @When("user chooses the {string} option")
     public void userChooseTheOption(String subModule) {
@@ -66,11 +83,11 @@ login page
     }
 */
 
-
+/*
      @Then("verify the deleted file is displayed on the page")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
 
-         filePage.deletedFilesFolder.click();
+         //filePage.deletedFilesFolder.click();
 BrowserUtils.sleep(5);
 
       List<String> actualDeletedItem = new ArrayList<>();
@@ -78,7 +95,7 @@ BrowserUtils.sleep(5);
             actualDeletedItem.add(each.getText());
 
         }
-        // System.out.println("actualDeletedItem = " + actualDeletedItem);
+        System.out.println("actualDeletedItem = " + actualDeletedItem);
         Assert.assertTrue(actualDeletedItem.contains(fileNameToDelete));
 
     }
