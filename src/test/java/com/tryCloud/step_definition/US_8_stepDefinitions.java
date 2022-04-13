@@ -52,8 +52,12 @@ login page
     public void user_clicks_action_icon_from_any_file_on_the_page() {
 
         fileNameToDelete  = generalPage.fileName.get(num).getText();
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(4);
+        System.out.println(fileNameToDelete);
         favoritePage.actionBtns.get(num).click();
+       // deletePage.deleteIcon.click();
+        BrowserUtils.sleep(8);
+
     }
 
   /* @When("user chooses the {string} option")
@@ -67,13 +71,14 @@ login page
     public void verify_the_deleted_file_is_displayed_on_the_page() {
 
          filePage.deletedFilesFolder.click();
+BrowserUtils.sleep(5);
 
       List<String> actualDeletedItem = new ArrayList<>();
         for (WebElement each : deletePage.deletedItems) {
             actualDeletedItem.add(each.getText());
 
         }
-         System.out.println("actualDeletedItem = " + actualDeletedItem);
+        // System.out.println("actualDeletedItem = " + actualDeletedItem);
         Assert.assertTrue(actualDeletedItem.contains(fileNameToDelete));
 
     }
@@ -81,24 +86,29 @@ login page
 
 
 
-/*
 
+
+
+/*
   @Then("verify the deleted file is displayed on the page")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
         filePage.deletedFilesFolder.click();
 
-        WebElement deletedItems = Driver.getDriver().findElement(By.xpath("//span[@class='innernametext'][.='"+fileNameToDelete+"']"));
+        WebElement deletedItems = Driver.getDriver().findElement(By.xpath("//span[.='" + fileNameToDelete  + "']"));
+               BrowserUtils.sleep(5);
         assertTrue(deletedItems.isDisplayed());
 
+//span[@class='innernametext'][.='"+fileNameToDelete+"']
 
+ */
     }
 
 
 
- */
 
 
-}
+
+
 
 
 

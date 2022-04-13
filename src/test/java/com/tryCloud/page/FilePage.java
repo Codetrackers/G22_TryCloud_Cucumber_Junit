@@ -53,4 +53,5 @@ public class FilePage extends BasePage{
 
 @FindBy(xpath = "//a[@class='nav-icon-trashbin svg']")
     public WebElement deletedFilesFolder;
+
 }
