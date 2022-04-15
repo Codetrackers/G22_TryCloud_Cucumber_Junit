@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class TalkPage extends BasePage{
+
     @FindBy(xpath = "//input[@placeholder='Search conversations or users']")
     public WebElement searchBox;
 
