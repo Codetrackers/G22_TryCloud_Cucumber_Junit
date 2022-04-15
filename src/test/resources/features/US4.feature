@@ -1,8 +1,8 @@
 Feature: As a user, I should be able to access to Files module.
 
   Background:
-    Given user is on the dashboard page
-    When user clicks the "Files" module
+    Given user on the dashboard page
+    When the user clicks the "Files" module
 
 
   Scenario: verify users can access to Files module
